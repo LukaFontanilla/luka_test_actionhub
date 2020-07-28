@@ -41,3 +41,8 @@ Head over to [the issue tracker](https://github.com/looker/actions/issues) to re
 Most users should use our official action hub cloud service running on (https://actions.looker.com/). By default, that's what Looker will use to provide actions. The action hub works whether your Looker instance is hosted by us or on-premise. If you'd like to deploy a copy of the same actions within your own infrastructure, you can do so by deploying this repository yourself, and adding it to Looker as a new hub.
 
 [Deployment instructions &rarr;](docs/deploying.md)
+
+## Deployment using reverse proxy ngrok (local deployment and testing of custom action hub)
+https://ngrok.com/ <- follow instructions here to setup ngrok. Then start in actions directory, set up environment variables as per the "Setting Up Local Action Hub server" deployment instructions here (https://docs.looker.com/sharing-and-publishing/action-hub#adding_your_action_files_to_the_looker_action_hub_repo). Action hub url will point at one of the forwarding addresses that ngrok generates for you.
+
+Reasons for using ngrok, due to some recent changes to the Looker Action Hub Server we will no longer be able to leverage the Heroku free tier to deploy and test a custom action hub
